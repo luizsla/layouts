@@ -1,0 +1,43 @@
+// Regras Scss para todos os componentes globais do site.
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.navigationBar-wrapper {
+    position: relative;
+    z-index: 1;
+
+    // Menu de navegação
+    .navigation-bar {
+        font-weight: 100;
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+
+        h3 {
+            font-weight: 100;
+        }
+
+        .nav-item {
+            font-size: 1.1rem;
+
+            .nav-link {
+                //Breakpoint para dar borda branca no hover nos liks de navegação
+                @media screen and (min-width: map-get($map: $grid-breakpoints, $key: 'md')) {
+                    border-bottom: 1px solid transparent;
+
+                    &:hover {
+                        transition: border 0.7s;
+                        border-bottom-color: $white;
+                    }
+                }
+            }
+        }
+
+        //Breakpoint para tornar a barra de navegação transparente no breakpoint médio
+        @media screen and (min-width: map-get($map: $grid-breakpoints, $key: 'md')) {
+            background-color: transparent !important;
+        }
+    }
+}
+

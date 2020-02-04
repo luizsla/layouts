@@ -1,0 +1,9 @@
+//Folha de estilo SASS que customiza valores padrão do Bootstrap via import e substituição de variáveis
+//Customizando valores padrão do bootstrap.
+$theme-colors: (
+    "primary": #36b3a8
+);
+
+//Importando a folhas de estilo do bootstrap
+@import '../../bootstrap-4.4.1/scss/bootstrap.scss';
+
