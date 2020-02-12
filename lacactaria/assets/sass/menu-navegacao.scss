@@ -1,0 +1,118 @@
+//Container com todas as configurações do menu-hamburguer.
+.menu-hamburguerContainer {
+
+  label {
+    display: inline-block;
+    width: 40px;
+    height: 35px;
+    transition: all 0.3s linear;
+    position: relative;
+    cursor: pointer;
+  }
+
+  span {
+    width: 80%;
+    height: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: $cor-headers;
+    transition: all 0.3s linear;
+  }
+
+  span::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: -200%;
+    position: inherit;
+    background-color: $cor-headers;
+    transition: inherit;
+  }
+
+  span::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 200%;
+    position: inherit;
+    background-color: $cor-headers;
+    transition: inherit;
+  }
+
+  @media(min-width: $breakpoint-tablet) {
+    display: none;
+  }
+}
+
+//Setup da lista de itens verticais.
+.lista-itens {
+  text-align: center;
+  top: 76px;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  background-color: inherit;
+
+  //Hide da logo desktop para menus mobile.
+  #logo-desktop {
+    display: none;
+
+    @media(min-width: $breakpoint-tablet) {
+      display: inline-block;
+    }
+  }
+
+  //Media queries para posicionamento vertical do menu em diferentes telas.
+  @media(orientation: landscape) {
+    top: 90px;
+  }
+
+  @media(min-width: 300px ) and (orientation: portrait) {
+    top: 81px;
+  }
+
+  @media(min-width: 320px ) and (orientation: portrait) {
+    top: 86px;
+  }
+
+  @media(min-width: 340px ) and (orientation: portrait) {
+    top: 90px;
+  }
+
+  //Media queries para telas maiores.
+  @media(min-width: $breakpoint-tablet) {
+    position: relative;
+    top: 0;
+    height: auto;
+    width: auto;
+    display: inline-block !important;
+    background-color: transparent;
+    animation: none;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+    li {
+      display: inline-block !important;
+      padding: 0px 16px;
+    }
+  }
+}
+
+//Animações e extras.
+  //Animação do menu hamburguer.
+.botao-ativo {
+  background-color: transparent !important;
+
+  &:before {
+    transform: translate(0% ,200%) rotate(-45deg) ;
+  }
+
+  &:after {
+    transform: translate(0%, -200%) rotate(45deg) ;
+  }
+}

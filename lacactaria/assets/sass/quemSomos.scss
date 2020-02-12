@@ -1,0 +1,10 @@
+.quem-somos {
+}
+
+.quemSomos-header {
+  @extend %headers;
+}
+
+.quemSomos-text {
+  @extend %text;
+}

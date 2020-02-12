@@ -1,0 +1,300 @@
+.pretty-underline {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.1em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in; }
+  .pretty-underline:hover {
+    background-size: 100% 88%; }
+
+.quemSomos-header, .produtos-header, .encomendas-header, .contato-header, .mapa-header, .footer-header {
+  color: #333;
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase; }
+
+.quemSomos-text, .produtos-text, .encomendas-text, .contato-text, .mapa-text, .footer p {
+  color: #777;
+  font-family: "Alice", serif; }
+
+.contato-header, .contato-text {
+  text-shadow: 0px 3px 10px #43966b;
+  color: white; }
+
+.produtos img, .contato-form button, .garrafas img {
+  border-bottom: 5px solid transparent; }
+
+html, body {
+  height: 100%; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style-type: none; }
+
+.menu-hamburguerContainer label {
+  display: inline-block;
+  width: 40px;
+  height: 35px;
+  transition: all 0.3s linear;
+  position: relative;
+  cursor: pointer; }
+.menu-hamburguerContainer span {
+  width: 80%;
+  height: 6px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background-color: #333;
+  transition: all 0.3s linear; }
+.menu-hamburguerContainer span::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -200%;
+  position: inherit;
+  background-color: #333;
+  transition: inherit; }
+.menu-hamburguerContainer span::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 200%;
+  position: inherit;
+  background-color: #333;
+  transition: inherit; }
+@media (min-width: 768px) {
+  .menu-hamburguerContainer {
+    display: none; } }
+
+.lista-itens {
+  text-align: center;
+  top: 76px;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  background-color: inherit; }
+  .lista-itens #logo-desktop {
+    display: none; }
+    @media (min-width: 768px) {
+      .lista-itens #logo-desktop {
+        display: inline-block; } }
+  @media (orientation: landscape) {
+    .lista-itens {
+      top: 90px; } }
+  @media (min-width: 300px) and (orientation: portrait) {
+    .lista-itens {
+      top: 81px; } }
+  @media (min-width: 320px) and (orientation: portrait) {
+    .lista-itens {
+      top: 86px; } }
+  @media (min-width: 340px) and (orientation: portrait) {
+    .lista-itens {
+      top: 90px; } }
+  @media (min-width: 768px) {
+    .lista-itens {
+      position: relative;
+      top: 0;
+      height: auto;
+      width: auto;
+      display: inline-block !important;
+      background-color: transparent;
+      animation: none;
+      left: 50%;
+      transform: translateX(-50%); }
+      .lista-itens li {
+        display: inline-block !important;
+        padding: 0px 16px; } }
+
+.botao-ativo {
+  background-color: transparent !important; }
+  .botao-ativo:before {
+    transform: translate(0%, 200%) rotate(-45deg); }
+  .botao-ativo:after {
+    transform: translate(0%, -200%) rotate(45deg); }
+
+.header {
+  height: 100%;
+  background-image: url(../img/header-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 25%;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Playfair Display", serif;
+  color: #333; }
+  @media (min-width: 768px) {
+    .header {
+      background-position: auto; } }
+  .header .nav-bar {
+    background-color: rgba(249, 200, 189, 0.8);
+    padding: 5px 0 3px 0; }
+    .header .nav-bar:before {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background-image: linear-gradient(to right, #43966b, #6f9d58, #9ba04a, #c79f49, #f29a5c);
+      position: absolute;
+      left: 0;
+      top: 0; }
+  .header h1 {
+    font-family: inherit;
+    width: 80%;
+    text-shadow: 0px 0px 10px #777; }
+    @media (min-width: 768px) {
+      .header h1 {
+        font-size: 64px !important; } }
+
+.pretty-button {
+  color: #333;
+  transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+  user-select: none; }
+  .pretty-button:before, .pretty-button:after {
+    content: '';
+    position: absolute;
+    transition: inherit;
+    z-index: -1; }
+  .pretty-button:hover {
+    color: white;
+    transition-delay: .6s; }
+  .pretty-button:hover:before {
+    transition-delay: 0s; }
+  .pretty-button:hover:after {
+    background-image: linear-gradient(to bottom, #f29a5c);
+    transition-delay: .4s; }
+
+.hover-centro:before {
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 0;
+  border: 2px solid #f29a5c;
+  border-left: 0;
+  border-right: 0; }
+.hover-centro:after {
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  background: #f29a5c; }
+.hover-centro:hover:before {
+  left: 0;
+  width: 100%; }
+.hover-centro:hover:after {
+  top: 0;
+  height: 100%; }
+
+.produtos {
+  background-image: url("../img/imgs-sistema/greyfloral.png"); }
+  .produtos img {
+    opacity: 0;
+    transition: opacity 2s ease-out, transform 0.5s ease-out; }
+    .produtos img:hover {
+      transform: scale(1.05);
+      border-bottom: 5px solid #43966b; }
+  .produtos #galeria[data-columns]::before {
+    content: '1 .column.size-1of1'; }
+    @media (min-width: 500px) {
+      .produtos #galeria[data-columns]::before {
+        content: '2 .column.size-1of2'; } }
+    @media (min-width: 750px) {
+      .produtos #galeria[data-columns]::before {
+        content: '3 .column.size-1of3'; } }
+    @media (min-width: 1000px) {
+      .produtos #galeria[data-columns]::before {
+        content: '4 .column.size-1of4'; } }
+
+.column {
+  float: left; }
+
+.size-1of1 {
+  width: 100%; }
+
+.size-1of2 {
+  width: 47%;
+  margin-right: 4%; }
+  .size-1of2:last-of-type {
+    margin-right: 0; }
+
+.size-1of3 {
+  width: 30.5%;
+  margin-right: 2.6%; }
+  .size-1of3:last-of-type {
+    margin-right: 0; }
+
+.size-1of4 {
+  width: 23%;
+  margin-right: 2.6%; }
+  .size-1of4:last-of-type {
+    margin-right: 0; }
+
+.contato {
+  background-color: #8ad18b;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%2343966b' fill-opacity='0.4' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");
+  min-height: 500px; }
+
+.contato-form {
+  color: #333;
+  font-family: "Alice", serif; }
+  .contato-form fieldset {
+    border: dashed rgba(119, 119, 119, 0.4) 1px; }
+  .contato-form input, .contato-form textarea {
+    color: #777; }
+    .contato-form input:focus, .contato-form textarea:focus {
+      outline-color: #f9c8bd; }
+  .contato-form textarea {
+    height: 100px; }
+  .contato-form button:hover {
+    transform: scale(1.05);
+    border-bottom: 5px solid #f9c8bd; }
+  .contato-form .form-ContatoLegenda {
+    margin: 5px 0; }
+
+.form-requiredSign {
+  color: red;
+  font-weight: bolder; }
+
+.garrafas img {
+  opacity: 0;
+  transition: opacity 2s ease-out, transform 0.5s ease-out; }
+  .garrafas img:hover {
+    transform: scale(1.05);
+    border-bottom: 5px solid #43966b; }
+
+.mapa {
+  min-height: 500px; }
+
+.mapa-espaco {
+  width: 100%;
+  height: 400px;
+  background-color: black; }
+
+.footer:before {
+  content: "";
+  width: 100%;
+  height: 10px;
+  background-image: linear-gradient(to right, #43966b, #6f9d58, #9ba04a, #c79f49, #f29a5c);
+  position: absolute;
+  left: 0;
+  top: 0; }
+.footer:after {
+  content: "";
+  width: 100%;
+  height: 10px;
+  background-image: linear-gradient(to right, #43966b, #6f9d58, #9ba04a, #c79f49, #f29a5c);
+  position: absolute;
+  left: 0;
+  bottom: 0; }
+.footer ul {
+  padding-left: 0px; }
+.footer li {
+  display: inline-block; }
+
+.footer-icon {
+  width: 50px;
+  height: 50px; }
+
+/*# sourceMappingURL=estilo.css.map */

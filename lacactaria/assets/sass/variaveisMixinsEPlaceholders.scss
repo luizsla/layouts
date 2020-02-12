@@ -1,0 +1,74 @@
+//Variáveis
+
+	//Paleta:
+$veridian: rgba(67, 150, 107, 1);
+$dark-sea-green: rgba(138, 209, 139, 1);
+$spanish-pink: rgba(249, 200, 189, 1);
+$sandy-brown: rgba(242, 154, 92, 1);
+$medium-spring-bud: rgba(198, 232, 141, 1);
+
+	//Outras Cores:
+$cor-headers: #333;
+$cor-texto: #777;
+
+  //Fontes:
+$font-header: 'Playfair Display', serif;
+$font-text: 'Alice', serif;
+
+  //breakpoints de telas:
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 800px;
+
+//Mixins
+
+.pretty-underline {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.1em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+
+  &:hover {
+    background-size: 100% 88%;
+  }
+}
+
+@mixin pretty-border($color) {
+  border: dotted 2px $color;
+}
+
+@mixin magic-border--hover($cor) {
+  transform: scale(1.05);
+  border-bottom: 5px solid $cor;
+}
+
+@mixin linhas-gradientes($altura) {
+  content: "";
+  width: 100%;
+  height: $altura;
+  background-image: linear-gradient(to right, #43966b, #6f9d58, #9ba04a, #c79f49, #f29a5c);
+  position: absolute;
+  left: 0;
+}
+
+
+//Placeholders
+%headers {
+  color: $cor-headers;
+  font-family: $font-header;
+  text-transform: uppercase;
+}
+
+%text {
+  color: $cor-texto;
+  font-family: $font-text;
+}
+
+%text-contato {
+  text-shadow: 0px 3px 10px $veridian;
+  color: white;
+}
+
+%magic-border--default {
+  border-bottom: 5px solid transparent;
+}

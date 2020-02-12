@@ -1,0 +1,17 @@
+.mapa {
+  min-height: 500px;
+}
+
+.mapa-header {
+  @extend %headers;
+}
+
+.mapa-text {
+  @extend %text;
+}
+
+.mapa-espaco {
+  width: 100%;
+  height: 400px;
+  background-color: black;
+}

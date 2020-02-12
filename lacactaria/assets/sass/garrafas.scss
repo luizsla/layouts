@@ -1,0 +1,11 @@
+.garrafas {
+  img {
+    @extend %magic-border--default;
+    opacity: 0;
+    transition: opacity 2s ease-out, transform 0.5s ease-out;
+
+    &:hover {
+      @include magic-border--hover($veridian);
+    }
+  }
+}

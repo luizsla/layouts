@@ -1,0 +1,76 @@
+.produtos {
+  background-image: url("../img/imgs-sistema/greyfloral.png");
+
+  img {
+    @extend %magic-border--default;
+    opacity: 0;
+    transition: opacity 2s ease-out, transform 0.5s ease-out;
+
+    &:hover {
+      @include magic-border--hover($veridian);
+    }
+  }
+
+  #galeria[data-columns]::before {
+    content: '1 .column.size-1of1';
+
+    @media (min-width: 500px) {
+      content: '2 .column.size-1of2';
+    }
+
+    @media (min-width: 750px) {
+      content: '3 .column.size-1of3';
+    }
+
+    @media (min-width: 1000px) {
+      content: '4 .column.size-1of4';
+    }
+
+  }
+}
+
+//Classes do grid da galeria.
+.column {
+  float: left;
+}
+
+.size-1of1 {
+  width: 100%;
+}
+
+.size-1of2 {
+  width: 47%;
+  margin-right: 4%;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.size-1of3 {
+  width: 30.5%;
+  margin-right: 2.6%;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.size-1of4 {
+  width: 23%;
+  margin-right: 2.6%;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+
+
+.produtos-header {
+  @extend %headers;
+}
+
+.produtos-text {
+  @extend %text;
+}
