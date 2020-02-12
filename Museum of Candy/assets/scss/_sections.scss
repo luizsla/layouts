@@ -1,0 +1,12 @@
+.content-section {
+    color: $nav-links-color;
+
+    p {
+        color: lighten($color: $nav-links-color, $amount: 15%);
+        line-height: 1.5;
+
+        @media screen and (min-width: 770px) {
+            line-height: 1.7;
+        }
+    }
+}

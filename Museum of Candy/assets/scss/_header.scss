@@ -1,0 +1,19 @@
+//Folha de estilo SASS com código relativo a todo o conteúdo contido pela tag <header> </header> do arquivo index.html deste projeto.
+
+.header {
+    color: $nav-links-color;
+    font-size: $nav-links-font-size;
+
+    .nav-link {
+        &:hover {
+            color: $nav-links-color !important;
+            transition: color 0.5s;
+        }
+    }
+
+    .primary-header-text {
+        @media screen and (max-width: 1300px) {
+            font-size: 2rem !important;
+        }
+    }
+}

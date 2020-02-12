@@ -1,0 +1,16 @@
+@import 'variables';
+
+// Estilos Globais
+body {
+    background-color: $body-background-color;
+    font-family: 'Nunito', sans-serif;
+}
+
+.scrolled {
+    background-color: rgb(222, 192, 222);
+    transition: background-color 0.2s;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+@import 'header';
+@import 'sections';
